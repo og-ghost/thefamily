@@ -27,7 +27,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "ng": "ng",
     "start": "set DEBUG=http && nodemon --exec babel-node server/app.js",
     "build": "ng build",
     "test": "ng test",
