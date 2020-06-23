@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use('/api/v1', routes);
 app.get('/', (request, response) => {
-  response.render('index');
+  response.status(200).send({ status: 200, message: 'Welcome to The Adopt Family' });
 });
 
 // Render quick credit documentation
