@@ -27,8 +27,8 @@ class PayPalController {
           payment_method: 'paypal'
         },
         redirect_urls: {
-          return_url: `http://localhost:3000/api/v1/success?amount=${req.body.price}`,
-          cancel_url: 'http://localhost:3000/api/v1/cancel'
+          return_url: `https://securetheadoptfamily.herokuapp.com/api/v1/success?amount=${req.body.price}`,
+          cancel_url: 'https://securetheadoptfamily.herokuapp.com/api/v1/cancel'
         },
         transactions: [{
           item_list: {
@@ -100,7 +100,7 @@ class PayPalController {
 
         if (payment.state === 'approved') {
           console.log(payment.state);
-          return res.redirect('http://127.0.0.1:8887/success.html');
+          return res.redirect('http://theadoptfamily.com/success.html');
         }
 
         // return res.send({
@@ -120,9 +120,7 @@ class PayPalController {
 
   static async cancel(req, res) {
     try {
-      return res.send({
-        status: 400,
-      });
+      return res.redirect('http://theadoptfamily.com/cancel.html');
     } catch (err) {
       return res.send({
         status: 400,
