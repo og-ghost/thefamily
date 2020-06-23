@@ -30,7 +30,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "set DEBUG=http && nodemon --exec babel-node server/app.js",
+    "start": "set DEBUG=http && babel-node server/app.js",
     "migrations": "babel-node server/migration/createTable",
     "droptable": "babel-node server/migration/dropTable"
   },
